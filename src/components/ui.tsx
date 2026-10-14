@@ -144,7 +144,7 @@ export function Frame({
 }) {
   return (
     <div
-      className={`bg-bg-page border-border-default overflow-hidden rounded-lg border ${className}`}>
+      className={`bg-bg-page border-border-default relative overflow-hidden rounded-lg border ${className}`}>
       <Image
         src={src}
         alt={alt}
@@ -152,7 +152,9 @@ export function Frame({
         height={height}
         priority={priority}
         sizes={sizes}
-        className={`h-full w-full ${fit === "contain" ? "object-contain p-6" : "object-cover"}`}
+        className={`${className.includes("aspect-") ? "absolute inset-0 h-full" : "h-auto"} w-full ${
+          fit === "contain" ? "object-contain p-6" : "object-cover"
+        }`}
       />
     </div>
   );

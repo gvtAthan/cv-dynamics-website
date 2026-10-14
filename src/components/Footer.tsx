@@ -5,7 +5,7 @@ import { Icon, type IconName } from "./Icon";
 import { Logo } from "./Logo";
 
 const linkClass =
-  "focus-ring text-body-s text-text-inverse-muted hover:text-text-inverse rounded-sm underline-offset-4 hover:underline";
+  "focus-ring text-body-m text-text-inverse-muted hover:text-text-inverse rounded-sm underline-offset-4 hover:underline";
 
 function Column({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -27,7 +27,7 @@ function ContactRow({ icon, children }: { icon: IconName; children: React.ReactN
 
 export function Footer() {
   return (
-    <footer className="bg-bg-inverse text-text-inverse">
+    <footer className="bg-bg-inverse text-text-inverse border-t border-white/10">
       <div className="container-page grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-12 lg:gap-6">
         <div className="sm:col-span-2 lg:col-span-4">
           <Logo inverse />
@@ -92,7 +92,7 @@ export function Footer() {
                   <span className="sr-only">(opens in new tab)</span>
                 </a>
               ) : (
-                <span className="text-body-s text-text-inverse-muted">{site.sister.label}</span>
+                <span className="text-body-m text-text-inverse-muted">{site.sister.label}</span>
               )}
             </li>
             <li>
@@ -120,7 +120,7 @@ export function Footer() {
               ))}
             </ContactRow>
             <ContactRow icon="map-pin">
-              <address className="text-body-s text-text-inverse-muted not-italic">{site.addressShort}</address>
+              <address className="text-body-m text-text-inverse-muted not-italic">{site.address}</address>
             </ContactRow>
           </Column>
         </div>

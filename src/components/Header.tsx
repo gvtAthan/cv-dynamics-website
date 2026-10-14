@@ -151,9 +151,9 @@ export function Header() {
           </ul>
         </nav>
 
-        <ButtonLink href="/contact?type=quote" className="hidden lg:inline-flex">
-          Request a quote
-        </ButtonLink>
+        <div className="hidden lg:block">
+          <ButtonLink href="/contact?type=quote">Request a quote</ButtonLink>
+        </div>
 
         <button
           ref={menuButton}

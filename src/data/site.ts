@@ -20,7 +20,6 @@ export const site = {
   ],
   address:
     "4th Floor, W.S.A Commercial Building, Villa Esmeralda Subdivision, BLK24 LOT28, RSBS Blvd, Brgy. Balibago, Santa Rosa City, Laguna, Philippines",
-  addressShort: "4F W.S.A Commercial Bldg., RSBS Blvd, Brgy. Balibago, Santa Rosa City, Laguna",
   // Content needed from C&V.
   businessHours: null as string | null,
   // Placeholders until C&V confirms its official pages.

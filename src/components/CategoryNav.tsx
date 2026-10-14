@@ -21,8 +21,10 @@ export function CategoryNav({ tabs }: { tabs: Tab[] }) {
       .filter((el): el is HTMLElement => el !== null);
 
     const update = () => {
-      // The section whose top has passed the line just under the sticky bars is the current one.
-      const line = (bar.current?.getBoundingClientRect().bottom ?? 0) + 24;
+      // The current section is the last one whose top has reached the line just under the
+      // pinned header and category bar (where a tab click lands it).
+      const el = bar.current;
+      const line = el ? parseFloat(getComputedStyle(el).top) + el.offsetHeight + 24 : 0;
       let current = ALL;
       for (const s of sections) {
         if (s.getBoundingClientRect().top <= line) current = s.id;

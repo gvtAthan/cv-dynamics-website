@@ -15,14 +15,14 @@ export function CategoryCard({ category }: { category: ProductCategory }) {
       href={`/products#${category.id}`}
       className="group focus-ring border-border-default bg-bg-page hover:border-border-brand flex h-full flex-col overflow-hidden rounded-lg border transition-[border-color,box-shadow] hover:shadow-md"
     >
-      <div className="bg-bg-page border-border-default aspect-[4/3] border-b">
+      <div className="bg-bg-page border-border-default relative aspect-[4/3] border-b">
         <Image
           src={productImage(category.coverImage)}
           alt=""
           width={480}
           height={360}
           sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-          className="h-full w-full object-contain p-6"
+          className="absolute inset-0 h-full w-full object-contain p-6"
         />
       </div>
       <div className="flex flex-1 flex-col gap-2 p-6">
@@ -55,14 +55,14 @@ export function ProductCard({
   const link = href ?? `/contact?type=quote&product=${encodeURIComponent(product.name)}`;
   return (
     <article className="border-border-default bg-bg-page flex h-full flex-col overflow-hidden rounded-lg border">
-      <div className="border-border-default aspect-square border-b">
+      <div className="border-border-default relative aspect-square border-b">
         <Image
           src={productImage(product.image)}
           alt={product.name}
           width={400}
           height={400}
           sizes="(min-width: 1024px) 25vw, 50vw"
-          className="h-full w-full object-contain p-4"
+          className="absolute inset-0 h-full w-full object-contain p-4"
         />
       </div>
       <div className="flex flex-1 flex-col gap-1 p-4 lg:p-5">
