@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+/* Design tokens from the Figma "Tokens" collection (C&V UI mockup v2). */
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  --color-text-primary: #14162b;
+  --color-text-secondary: #454962;
+  --color-text-muted: #5f637c;
+  --color-text-brand: #02136d;
+  --color-text-link: #0b04a9;
+  --color-text-inverse: #ffffff;
+  --color-text-inverse-muted: #dde2ff;
+  --color-text-disabled: #8e92a8;
+  --color-text-danger: #b42318;
+  --color-text-success: #1b7a43;
+  --color-text-warning: #b54708;
+
+  --color-bg-page: #ffffff;
+  --color-bg-subtle: #f6f7fa;
+  --color-bg-muted: #f0f1f5;
+  --color-bg-brand-subtle: #eef0ff;
+  --color-bg-inverse: #01003c;
+  --color-bg-inverse-raised: #030053;
+  --color-bg-danger-subtle: #fdecea;
+  --color-bg-success-subtle: #e8f5ee;
+  --color-bg-warning-subtle: #fff6e0;
+  --color-bg-image: #e3e5ec;
+
+  --color-action-primary: #02136d;
+  --color-action-primary-hover: #030053;
+  --color-action-primary-active: #01003c;
+  --color-action-secondary-hover: #eef0ff;
+  --color-action-secondary-active: #dde2ff;
+  --color-action-danger: #b42318;
+  --color-action-danger-hover: #912018;
+  --color-action-disabled: #e3e5ec;
+  --color-action-inverse: #ffffff;
+  --color-action-inverse-hover: #eef0ff;
+  --color-action-inverse-active: #dde2ff;
+
+  --color-border-default: #e3e5ec;
+  --color-border-strong: #c9ccd8;
+  --color-border-input: #8e92a8;
+  --color-border-brand: #02136d;
+  --color-border-focus: #2b2bd9;
+  --color-border-danger: #b42318;
+  --color-border-success: #1b7a43;
+
+  --color-icon-accent: #2b2bd9;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  --shadow-sm: 0 1px 2px #01003c0f, 0 1px 3px #01003c14;
+  --shadow-md: 0 8px 24px -4px #01003c14;
+
+  --container-content: 1280px;
+}
+
+/* Type scale: desktop / mobile pairs from the Figma text styles. */
+@utility text-h1 {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  @media (width >= 64rem) {
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: -0.01em;
+  }
+}
+@utility text-h2 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+  @media (width >= 64rem) {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.005em;
+  }
+}
+@utility text-h3 {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 600;
+  @media (width >= 64rem) {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+@utility text-h4 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  @media (width >= 64rem) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+@utility text-body-l {
+  font-size: 18px;
+  line-height: 28px;
+}
+@utility text-body-m {
+  font-size: 16px;
+  line-height: 24px;
+}
+@utility text-body-s {
+  font-size: 14px;
+  line-height: 20px;
+}
+@utility text-caption {
+  font-size: 12px;
+  line-height: 16px;
+}
+@utility text-overline {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* 1280px content column with 20px (mobile) / 80px (desktop) side margins. */
+@utility container-page {
+  width: 100%;
+  max-width: calc(1280px + 2 * 80px);
+  margin-inline: auto;
+  padding-inline: 20px;
+  @media (width >= 64rem) {
+    padding-inline: 80px;
+  }
+}
+
+/* Focus ring: 2px white + 4px focus blue, matching Focus/Ring. */
+@utility focus-ring {
+  outline: none;
+  &:focus-visible {
+    box-shadow:
+      0 0 0 2px #ffffff,
+      0 0 0 4px var(--color-border-focus);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--color-bg-page);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
