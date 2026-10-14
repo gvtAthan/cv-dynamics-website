@@ -6,6 +6,7 @@ export const site = {
   // Open question for C&V: cvdynamics.com.ph or cvdynamicsinc.com.ph.
   url: "https://www.cvdynamics.com.ph",
   domainLabel: "www.cvdynamics.com.ph",
+  copyrightYear: 2026,
   tagline:
     "Engineered to deliver. Product distribution, wholesale and retail trading for supply chains across the Philippines.",
   phones: [
