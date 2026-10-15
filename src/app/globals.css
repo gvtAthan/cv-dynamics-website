@@ -159,6 +159,12 @@
     radial-gradient(45% 60% at 0% 100%, rgb(11 4 169 / 0.12) 0%, transparent 70%),
     linear-gradient(160deg, var(--color-bg-subtle) 0%, var(--color-action-secondary-active) 100%);
 }
+@utility bg-footer {
+  background-color: var(--color-bg-inverse);
+  background-image:
+    radial-gradient(50% 70% at 100% 100%, rgb(79 91 255 / 0.45) 0%, transparent 70%),
+    linear-gradient(160deg, var(--color-bg-inverse) 0%, var(--color-bg-inverse-raised) 45%, var(--color-text-link) 100%);
+}
 
 html {
   scroll-behavior: smooth;
