@@ -15,28 +15,33 @@ export const site = {
     { label: "0917 168 3207", href: "tel:+639171683207" },
   ],
   emails: [
-    { label: "sales@cvdynamics.com.ph", href: "mailto:sales@cvdynamics.com.ph" },
-    { label: "support@cvdynamics.com.ph", href: "mailto:support@cvdynamics.com.ph" },
+    {
+      label: "sales@cvdynamics.com.ph",
+      href: "mailto:sales@cvdynamics.com.ph",
+    },
+    {
+      label: "support@cvdynamics.com.ph",
+      href: "mailto:support@cvdynamics.com.ph",
+    },
   ],
   address:
     "4th Floor, W.S.A Commercial Building, Villa Esmeralda Subdivision, BLK24 LOT28, RSBS Blvd, Brgy. Balibago, Santa Rosa City, Laguna, Philippines",
-  // Content needed from C&V.
-  businessHours: null as string | null,
-  // Placeholders until C&V confirms its official pages.
+  businessHours: "9:00 AM - 6:00 PM, Monday to Friday (excluding holidays)",
+
   social: [
     {
       network: "Facebook",
       icon: "facebook" as IconName,
-      href: "https://www.facebook.com/PLACEHOLDER-CV-FACEBOOK-PAGE",
+      href: "https://www.facebook.com/cvdynamics",
     },
     {
       network: "LinkedIn",
       icon: "linkedin" as IconName,
-      href: "https://www.linkedin.com/company/PLACEHOLDER-CV-LINKEDIN-PAGE",
+      href: "https://www.linkedin.com/company/c-v-dynamics-inc",
     },
   ],
   // Sister company link shown in the footer. URL needed from C&V.
-  sister: { label: "GVT Enterprises Inc.", href: null as string | null },
+  sister: { label: "GVT Enterprises Inc.", href: "https://www.gvt.com.ph" },
 };
 
 export const primaryPhone = site.phones[0];
@@ -44,7 +49,12 @@ export const primaryPhone = site.phones[0];
 export type NavItem = {
   label: string;
   href: string;
-  children?: { label: string; href: string; description: string; icon: IconName }[];
+  children?: {
+    label: string;
+    href: string;
+    description: string;
+    icon: IconName;
+  }[];
 };
 
 export const nav: NavItem[] = [

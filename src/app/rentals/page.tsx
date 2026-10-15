@@ -3,7 +3,13 @@ import { Suspense } from "react";
 import { ButtonLink } from "@/components/Button";
 import { ProductCard } from "@/components/cards";
 import { RentalForm, RentalFormFromLink } from "@/components/forms/RentalForm";
-import { Badge, Frame, PageHero, Section, SectionHeader } from "@/components/ui";
+import {
+  Badge,
+  Frame,
+  PageHero,
+  Section,
+  SectionHeader,
+} from "@/components/ui";
 import { rentalDevices } from "@/data/company";
 
 export const metadata: Metadata = {
@@ -13,9 +19,18 @@ export const metadata: Metadata = {
 };
 
 const steps = [
-  { title: "Tell us what you need", text: "Choose the devices, quantity and how long you need them." },
-  { title: "Get a quote", text: "We confirm availability, rental terms and pricing." },
-  { title: "Start working", text: "Receive your devices, set up and ready for your project." },
+  {
+    title: "Tell us what you need",
+    text: "Choose the devices, quantity and how long you need them.",
+  },
+  {
+    title: "Get a quote",
+    text: "We confirm availability, rental terms and pricing.",
+  },
+  {
+    title: "Start working",
+    text: "Receive your devices, set up and ready for your project.",
+  },
 ];
 
 export default function RentalsPage() {
@@ -45,7 +60,11 @@ export default function RentalsPage() {
       />
 
       <Section labelledBy="rentals-available">
-        <SectionHeader id="rentals-available" overline="Available for rent" title="Devices you can rent today" />
+        <SectionHeader
+          id="rentals-available"
+          overline="Available for rent"
+          title="Devices you can rent today"
+        />
         <ul className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
           {rentalDevices.map((d) => (
             <li key={d.name}>
@@ -61,10 +80,17 @@ export default function RentalsPage() {
       </Section>
 
       <Section tone="subtle" labelledBy="rentals-steps">
-        <SectionHeader id="rentals-steps" overline="How it works" title="Renting in three steps" />
+        <SectionHeader
+          id="rentals-steps"
+          overline="How it works"
+          title="Renting in three steps"
+        />
         <ol className="grid gap-6 lg:grid-cols-3">
           {steps.map((s, i) => (
-            <li key={s.title} className="border-border-default bg-bg-page flex flex-col gap-3 rounded-lg border p-6">
+            <li
+              key={s.title}
+              className="border-border-default bg-bg-page flex flex-col gap-3 rounded-lg border p-6"
+            >
               <span className="bg-action-primary text-text-inverse text-h4 inline-flex size-12 items-center justify-center rounded-full">
                 {i + 1}
               </span>
@@ -73,13 +99,13 @@ export default function RentalsPage() {
             </li>
           ))}
         </ol>
-        {/* Content needed from C&V: minimum rental period, deposit and delivery terms. */}
-        <div className="mt-6">
-          <Badge tone="warning">Content needed: rental terms</Badge>
-        </div>
       </Section>
 
-      <section id="rental-request" aria-labelledby="rental-request-title" className="scroll-mt-20 py-16 lg:py-24">
+      <section
+        id="rental-request"
+        aria-labelledby="rental-request-title"
+        className="scroll-mt-20 py-16 lg:py-24"
+      >
         <div className="container-page grid gap-10 lg:grid-cols-12 lg:gap-6">
           <div className="lg:col-span-4">
             <p className="text-overline text-text-link mb-3">Rental request</p>
@@ -87,7 +113,8 @@ export default function RentalsPage() {
               Ask about rentals
             </h2>
             <p className="text-body-l text-text-secondary mt-4">
-              Tell us what you need and for how long. We will reply with availability and terms.
+              Tell us what you need and for how long. We will reply with
+              availability and terms.
             </p>
           </div>
           <div className="lg:col-span-8">
