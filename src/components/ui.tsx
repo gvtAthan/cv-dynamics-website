@@ -174,7 +174,7 @@ type PageHeroProps = {
 
 export function PageHero({ breadcrumb, overline, title, text, actions, aside, logo }: PageHeroProps) {
   return (
-    <section id="top" className="bg-bg-subtle scroll-mt-16 py-12 lg:scroll-mt-20 lg:py-20">
+    <section id="top" className="bg-hero-light scroll-mt-16 py-12 lg:scroll-mt-20 lg:py-20">
       <div className="container-page grid items-center gap-10 lg:grid-cols-12 lg:gap-6">
         <div className={aside ? "lg:col-span-7" : "lg:col-span-9"}>
           <nav aria-label="Breadcrumb" className="mb-6">

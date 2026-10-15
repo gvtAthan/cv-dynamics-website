@@ -9,7 +9,7 @@ import { categories } from "@/data/products";
 export default function HomePage() {
   return (
     <>
-      <section className="bg-bg-inverse text-text-inverse overflow-hidden py-16 lg:py-24">
+      <section className="bg-hero-dark text-text-inverse overflow-hidden py-16 lg:py-24">
         <div className="container-page grid items-center gap-12 lg:grid-cols-12 lg:gap-6">
           <div className="lg:col-span-6">
             <p className="text-overline text-text-inverse-muted mb-4">Product distribution · Wholesale &amp; retail</p>
