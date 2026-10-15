@@ -27,7 +27,7 @@ function ContactRow({ icon, children }: { icon: IconName; children: React.ReactN
 
 export function Footer() {
   return (
-    <footer className="bg-bg-inverse text-text-inverse border-t border-white/10">
+    <footer className="bg-footer text-text-inverse border-t border-white/10">
       <div className="container-page grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-12 lg:gap-6">
         <div className="sm:col-span-2 lg:col-span-4">
           <Logo inverse />

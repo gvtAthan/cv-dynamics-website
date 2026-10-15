@@ -144,6 +144,28 @@
   }
 }
 
+/* Hero backgrounds: brand navy (dark) or brand tint (light), each with a soft electric-blue glow. */
+@utility bg-hero-dark {
+  background-color: var(--color-bg-inverse);
+  background-image:
+    radial-gradient(60% 80% at 85% 15%, rgb(79 91 255 / 0.6) 0%, transparent 70%),
+    radial-gradient(50% 60% at 10% 100%, rgb(43 43 217 / 0.35) 0%, transparent 70%),
+    linear-gradient(135deg, var(--color-bg-inverse) 0%, var(--color-text-link) 60%, var(--color-icon-accent) 100%);
+}
+@utility bg-hero-light {
+  background-color: var(--color-bg-subtle);
+  background-image:
+    radial-gradient(55% 75% at 90% 10%, rgb(43 43 217 / 0.28) 0%, transparent 70%),
+    radial-gradient(45% 60% at 0% 100%, rgb(11 4 169 / 0.12) 0%, transparent 70%),
+    linear-gradient(160deg, var(--color-bg-subtle) 0%, var(--color-action-secondary-active) 100%);
+}
+@utility bg-footer {
+  background-color: var(--color-bg-inverse);
+  background-image:
+    radial-gradient(50% 70% at 100% 100%, rgb(79 91 255 / 0.45) 0%, transparent 70%),
+    linear-gradient(160deg, var(--color-bg-inverse) 0%, var(--color-bg-inverse-raised) 45%, var(--color-text-link) 100%);
+}
+
 html {
   scroll-behavior: smooth;
 }
