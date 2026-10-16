@@ -24,9 +24,13 @@ export default function VDynaPage() {
       <PageHero
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Software", href: "/software" }, { label: "V-Dyna WMS" }]}
         logo={
-          <div className="bg-bg-inverse mb-6 inline-flex rounded-md px-4 py-3">
-            <Image src="/images/logos/vdyna-wms-white.png" alt="" width={524} height={170} className="h-10 w-auto" />
-          </div>
+          <Image
+            src="/images/logos/vdyna-wms-color.png"
+            alt=""
+            width={621}
+            height={200}
+            className="mb-6 h-14 w-auto"
+          />
         }
         title="V-Dyna WMS"
         text="V-Dyna WMS packages help businesses streamline warehouse operations, improve inventory accuracy and efficiently manage the movement and storage of goods."
