@@ -55,11 +55,11 @@ export default function CDynaPage() {
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Software", href: "/software" }, { label: "C-Dyna POS" }]}
         logo={
           <Image
-            src="/images/logos/cdyna-pos-navy.png"
+            src="/images/logos/cdyna-pos-color.png"
             alt=""
-            width={442}
-            height={69}
-            className="mb-6 h-9 w-auto"
+            width={584}
+            height={200}
+            className="mb-6 h-14 w-auto"
           />
         }
         title="C-Dyna POS"

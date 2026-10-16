@@ -81,7 +81,7 @@ export const software: SoftwareProduct[] = [
   {
     name: "V-Dyna WMS",
     href: "/software/v-dyna-wms",
-    logo: { src: "/images/logos/vdyna-wms-white.png", width: 524, height: 170 },
+    logo: { src: "/images/logos/vdyna-wms-white.png", width: 621, height: 200 },
     text: "Streamline warehouse operations, improve inventory accuracy and manage the movement and storage of goods.",
     points: [
       "Better control and visibility of stock",
@@ -93,7 +93,7 @@ export const software: SoftwareProduct[] = [
   {
     name: "C-Dyna POS",
     href: "/software/c-dyna-pos",
-    logo: { src: "/images/logos/cdyna-pos-white.png", width: 397, height: 136 },
+    logo: { src: "/images/logos/cdyna-pos-white.png", width: 584, height: 200 },
     text: "Order and inventory management system. Beyond the ordinary POS.",
     points: [
       "Centralized dashboard",
